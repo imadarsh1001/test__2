@@ -1,7 +1,7 @@
 from scrapy import Spider
 from scrapy.http import Request
-import pyexcel,csv
-import pdb
+#import pyexcel,csv
+#import pdb
 
 def product_info(response, value):
     return response.xpath('//th[contains(text(),"'+ value +'")]/following-sibling::td/text()').extract_first()
